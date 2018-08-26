@@ -1,0 +1,15 @@
+{
+    "name": "martin/test",
+    "description": "ahsdjkasd",
+    "authors": [
+        {
+            "name": "martin",
+            "email": "1150354658@qq.com"
+        }
+    ],
+    "require": {
+        "illuminate/container": "v5.4.36",
+        "phpunit/phpunit": "^5.7",
+        "php-amqplib/php-amqplib": ">=2.6.1"
+    }
+}
