@@ -19,8 +19,8 @@ $msg = new AMQPMessage(
     $data,
     array('delivery_mode' => AMQPMessage::DELIVERY_MODE_PERSISTENT)#这边虽然是永久存储但是并不真的保证一定写入到磁盘中
 );
-$cha
-nnel->basic_publish($msg, '', 'hello');
+$channel->basic_qos(null,1,null); #只有等到一个worker 给了ask 之后才会再次给msg
+$channel->basic_publish($msg, '', 'hello');
 
 echo ' [x] Sent ', $data, "\n";
 
